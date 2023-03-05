@@ -9,7 +9,7 @@ package com.mirea.kt.hw1plant;
  * @author Home
  */
 public class deciduous extends trees {
-    private String colorOfLeaves;
+    private final String colorOfLeaves;
     private int nomberOfLeaves;
     private int leafSize;
     public void growLeaves(int nomberOfNeedles){
@@ -41,15 +41,15 @@ public class deciduous extends trees {
            this.leafSize=0;
         }
     }
-     public deciduous(String barkColor, int nomberOfHollow, int nomberOfTwig){
-        super(barkColor, nomberOfHollow, nomberOfTwig);
-        this.colorOfLeaves=colorOfLeaves;
-        this.leafSize=leafSize;
-        this.nomberOfLeaves=nomberOfLeaves;
+     public deciduous(String title, int width, int sizeInSm, String barkColor, int nomberOfHollow, int nomberTwig, String colorOfLeaves1, int nomberOfLeaves1, int leafSize1){
+        super(title, width, sizeInSm,barkColor, nomberOfHollow, nomberTwig);
+        this.colorOfLeaves=colorOfLeaves1;
+        this.leafSize=leafSize1;
+        this.nomberOfLeaves=nomberOfLeaves1;
     }
      @Override
     public String toString() {
-        String str = "Title ="+ getTitle() + ", Width = "+ getWidth() + ", Size In Sm= "+ getSizeInSm() + ", Bark Color = "+ getBarkColor() + ", Nomber Of Hollow" + getNomberOfHollow() + ", Color Of Leaves" + getColorOfLeaves() + ", Leaf Size " + getLeafSize() + ", Nomber Of Leaves " + getNomberOfLeaves();
+        String str = "Title ="+ getTitle() + ", Width = "+ getWidth() + ", Size In Sm= "+ getSizeInSm() + ", Bark Color = "+ getBarkColor() + ", Nomber Of Hollow= " + getNomberOfHollow() +",Nomber of twig= "+ getNomberTwig() + ", Color Of Leaves= " + getColorOfLeaves() + ", Leaf Size= " + getLeafSize() + ", Nomber Of Leaves= " + getNomberOfLeaves();
         return str;
     }
     

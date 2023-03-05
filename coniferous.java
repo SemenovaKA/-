@@ -9,7 +9,7 @@ package com.mirea.kt.hw1plant;
  * @author Home
  */
 public class coniferous extends trees {
-    private String needleСolor;
+    private final String needleСolor;
     private int lenghtOfNeedles;
     private int powerOfTheSmellOfNeedles;
     public void growNeedles(int nomberOfNeedles){
@@ -42,15 +42,20 @@ public class coniferous extends trees {
            this.powerOfTheSmellOfNeedles=0;
         }
     }
-     public coniferous(String barkColor, int nomberOfHollow, int nomberOfTwig){
-        super(barkColor, nomberOfHollow, nomberOfTwig);
-        this.powerOfTheSmellOfNeedles=powerOfTheSmellOfNeedles;
-        this.needleСolor=needleСolor;
-        this.lenghtOfNeedles=lenghtOfNeedles;
+    public coniferous(String title, int width, int sizeInSm, String barkColor, int nomberOfHollow, int nomberTwig, String needleСolor1, int lenghtOfNeedles1, int powerOfTheSmellOfNeedles1){
+        super(title, width, sizeInSm,barkColor, nomberOfHollow, nomberTwig);
+        this.powerOfTheSmellOfNeedles= powerOfTheSmellOfNeedles1;
+        this.needleСolor= needleСolor1;
+        this.lenghtOfNeedles=lenghtOfNeedles1;
     }
-     @Override
+
+    /**
+     *
+     * @return
+     */
+    @Override
     public String toString() {
-        String str = "Title ="+ getTitle() + ", Width = "+ getWidth() + ", Size In Sm= "+ getSizeInSm() + ", Bark Color = "+ getBarkColor() + ", Nomber Of Hollow" + getNomberOfHollow() + ", Needle Сolor" + getNeedleСolor() + ", Lenght Of Needles " + getLenghtOfNeedles() + ", Power Of The Smell Of Needles " + getPowerOfTheSmellOfNeedles();
+        String str = "Title ="+ getTitle() + ", Width = "+ getWidth() + ", Size In Sm= "+ getSizeInSm() + ", Bark Color = "+ getBarkColor() +", Nomber Of Hollow= " + getNomberOfHollow() +",Nomber of twig= "+ getNomberTwig() + ", Needle Сolor= " + getNeedleСolor() + ", Lenght Of Needles= " + getLenghtOfNeedles() + ", Power Of The Smell Of Needles= " + getPowerOfTheSmellOfNeedles();
         return str;
     }
     

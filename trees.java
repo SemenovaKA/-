@@ -9,7 +9,7 @@ package com.mirea.kt.hw1plant;
  * @author Home
  */
 public class trees extends Plant{
-    private String barkColor;
+    private final String barkColor;
     private int nomberOfHollow;
     private int nomberTwig;
     public void photosynthesize(int hours){
@@ -27,7 +27,7 @@ public class trees extends Plant{
         return nomberOfHollow;
     }
 
-    public int getNomberOfTwig() {
+    public int getNomberTwig() {
         return nomberTwig;
     }
     public void setNomberOfHollow(int nomberOfHollow){
@@ -36,14 +36,14 @@ public class trees extends Plant{
            this.nomberOfHollow=0;
         }
     }
-    public void setNomberOfTwig(int nomberOfTwig){
-        this.nomberTwig = nomberOfTwig;
-        if (nomberOfTwig<0){
+    public void setNomberTwig(int nomberTwig){
+        this.nomberTwig = nomberTwig;
+        if (nomberTwig<0){
            this.nomberTwig=0;
         }
     }
-     public trees(String title, int nomberOfLeaves, int sizeInSm){
-        super(title, nomberOfLeaves, sizeInSm);
+     public trees(String title, int width, int sizeInSm, String barkColor,int nomberOfHollow,int nomberTwig){
+        super(title, width, sizeInSm);
         this.barkColor=barkColor;
         this.nomberOfHollow=nomberOfHollow;
         this.nomberTwig=nomberTwig;
@@ -51,7 +51,7 @@ public class trees extends Plant{
     }
      @Override
     public String toString() {
-        String str = "Title ="+ getTitle() + ", Width = "+ getWidth() + ", Size In Sm= "+ getSizeInSm() + ", Bark Color = "+ getBarkColor() + ", Nomber Of Hollow" + getNomberOfHollow();
+        String str = "Title ="+ getTitle() + ", Width = "+ getWidth() + ", Size In Sm= "+ getSizeInSm() + ", Bark Color = "+ getBarkColor() + ", Nomber Of Hollow= " + getNomberOfHollow()+", Nomber of twig= "+getNomberTwig();
         return str;
     }
     

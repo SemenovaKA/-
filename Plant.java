@@ -9,7 +9,7 @@ package com.mirea.kt.hw1plant;
  * @author Home
  */
 public class Plant {
-    private String title;
+    private final String title;
     private int width;
     private int sizeInSm;
     public void grow(int day, int sm){
@@ -42,7 +42,7 @@ public class Plant {
            this.sizeInSm=0;
         }
     }
-    public Plant(String title, int nomberOfLeaves, int sizeInSm){
+    public Plant(String title, int width, int sizeInSm){
         this.width=width;
         this.sizeInSm=sizeInSm;
         this.title=title;

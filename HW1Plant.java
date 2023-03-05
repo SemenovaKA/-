@@ -16,7 +16,7 @@ public class HW1Plant {
     public static void main(String[] args) {
         System.out.println("Вариант№4 РИБО-03-21 Семенова Ксения Александровна");
         Scanner in = new Scanner(System.in);
-        System.out.println("Plant, trees, coniferous or deciduous? ");
+        System.out.println("If you want to choose:\n Plant enter P\n Trees enter T\n Coniferous enter C \n Deciduous enter D ");
         String plantType= in.nextLine();
         System.out.println("What title? ");
         String title= in.nextLine();
@@ -24,49 +24,58 @@ public class HW1Plant {
         int width=in.nextInt();
         System.out.println("size in sm");
         int sizeInSm=in.nextInt();
-        if (plantType.equals("Plant")){
+        if (plantType.equals("P")){
              Plant firstPlant = new Plant(title,width,sizeInSm);
              System.out.println(firstPlant.toString());
         }
-        else if(plantType.equals("trees")){
+        else if(plantType.equals("T")){
             System.out.println("What bark color? ");
-             String barkColor= in.nextLine();
+            Scanner on = new Scanner(System.in);
+             String barkColor= on.nextLine();
              System.out.println("What nomber of hollow? ");
              int nomberOfHollow=in.nextInt();
              System.out.println("What nomber of twig");
              int nomberTwig=in.nextInt();
-             trees firstTrees = new trees(barkColor,nomberOfHollow,nomberTwig);
+             trees firstTrees = new trees(title,width,sizeInSm,barkColor,nomberOfHollow,nomberTwig);
              System.out.println(firstTrees.toString());
         }
-        else if(plantType.equals("coniferous")){
+        else if(plantType.equals("C")){
+            System.out.println("What bark color? ");
+            Scanner on = new Scanner(System.in);
+             String barkColor= on.nextLine();
+             System.out.println("What nomber of hollow? ");
+             int nomberOfHollow=in.nextInt();
+             System.out.println("What nomber of twig");
+             int nomberTwig=in.nextInt();
             System.out.println("What needle color? ");
-             String needleСolor= in.nextLine();
+            Scanner an = new Scanner(System.in);
+             String needleСolor= an.nextLine();
              System.out.println("What lenght of needles? ");
              int lenghtOfNeedles=in.nextInt();
              System.out.println("What power of the smell of needles from 1 to 10?");
              int powerOfTheSmellOfNeedles=in.nextInt();
-             coniferous firstConiferous = new coniferous(needleСolor,lenghtOfNeedles,powerOfTheSmellOfNeedles);
+             coniferous firstConiferous = new coniferous(title, width,sizeInSm,barkColor, nomberOfHollow, nomberTwig,needleСolor,lenghtOfNeedles,powerOfTheSmellOfNeedles);
              System.out.println(firstConiferous.toString());
         }
-        else if(plantType.equals("deciduos")){
+        else if(plantType.equals("D")){
+           System.out.println("What bark color? ");
+            Scanner on = new Scanner(System.in);
+             String barkColor= on.nextLine();
+             System.out.println("What nomber of hollow? ");
+             int nomberOfHollow=in.nextInt();
+             System.out.println("What nomber of twig");
+             int nomberTwig=in.nextInt();
             System.out.println("What color of leaves? ");
-             String colorOfLeaves= in.nextLine();
+            Scanner an = new Scanner(System.in);
+             String colorOfLeaves= an.nextLine();
              System.out.println("What nomber of leaves? ");
              int nomberOfLeaves=in.nextInt();
              System.out.println("What leaf size?");
              int leafSize=in.nextInt();
-             deciduous firstDeciduous = new deciduous(colorOfLeaves,nomberOfLeaves,leafSize);
+             deciduous firstDeciduous = new deciduous(title, width,sizeInSm,barkColor, nomberOfHollow, nomberTwig,colorOfLeaves,nomberOfLeaves,leafSize);
              System.out.println(firstDeciduous.toString());
         }
-        
-    
-    
-    
-    
     
     }
        
-        
-    
-    
 }
